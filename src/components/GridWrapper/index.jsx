@@ -7,12 +7,13 @@ const WrapperStyles = styled.section`
   grid-template-columns: repeat(12, 1fr);
   grid-auto-rows: minmax(min-content, max-content);
   gap: 0 10px;
-  padding: 50px 0;
   background-color: ${colours.primaryDark};
   color: #fff;
   height: 100%;
 `;
 
-const GridWrapper = ({ children }) => <WrapperStyles>{children}</WrapperStyles>;
+const GridWrapper = ({ className, children }) => (
+  <WrapperStyles className={className}>{children}</WrapperStyles>
+);
 
 export default GridWrapper;

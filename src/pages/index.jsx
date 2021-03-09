@@ -3,8 +3,6 @@ import styled from "styled-components";
 import MainPage from "components/MainPage";
 import Nav from "components/Nav";
 
-const Container = styled.div``;
-
 export default function Home() {
   return (
     <>
