@@ -22,7 +22,10 @@ const Home = ({ latestMovies }) => {
       </CustomGridWrapper>
       <CustomGridWrapper>
         <MovieCardsContainer>
-          <MovieCard />
+          {console.log(latestMovies)}
+          {latestMovies.map((movie) => (
+            <MovieCard />
+          ))}
         </MovieCardsContainer>
       </CustomGridWrapper>
     </>
@@ -34,7 +37,7 @@ export async function getStaticProps(context) {
     `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&page=1`
   );
 
-  const latestMovies = latestMoviesQuery.data;
+  const latestMovies = latestMoviesQuery.data.results;
 
   return {
     props: { latestMovies: latestMovies },

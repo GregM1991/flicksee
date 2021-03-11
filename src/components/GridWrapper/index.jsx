@@ -9,7 +9,6 @@ const WrapperStyles = styled.section`
   gap: 0 10px;
   background-color: ${colours.primaryDark};
   color: #fff;
-  height: 100%;
 `;
 
 const GridWrapper = ({ className, children }) => (
